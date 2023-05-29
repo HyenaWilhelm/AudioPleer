@@ -1,0 +1,43 @@
+﻿<Window x:Class="AudioPleer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AudioPleer"
+        mc:Ignorable="d"
+        Background="#12e6bf"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="2" x:Name="StartButton"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="64" Width="69" Click="Start_Click" Margin="0,325,0,0">
+            <Image Source="C:\Users\Matvey\Desktop\PRacticus3-master\PR3\image\Start-stop.jpg" Height="121"></Image>
+        </Button>
+        <Button Grid.Column="1" x:Name="RepeatButton" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="38" Width="52" Click="Button_Click_3" Margin="0,0,0,48">
+            <Image Source="C:\Users\Matvey\Desktop\PRacticus3-master\PR3\image\Reapete.jpg" Width="85" Height="34" RenderTransformOrigin="0.521,0.564"></Image>
+        </Button>
+
+        <Button Grid.Column="2" x:Name="AlbumSelectButton" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="40" Width="160" Click="Button_Click_4" Content="Выбрать альбом" FontSize="20" />
+
+        <Button Grid.Column="3" x:Name="NextButton"  HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="43" Width="42" Click="Button_Click_5" Margin="0,0,15,48">
+            <Image Source="C:\Users\Matvey\Desktop\PRacticus3-master\PR3\image\Next.jpg"></Image>
+        </Button>
+
+        <Button Grid.Column="1" x:Name="BackButton"  HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="45" Width="42" Click="Button_Click_6" Margin="23,0,0,48">
+            <Image Source="C:\Users\Matvey\Desktop\PRacticus3-master\PR3\image\back.jpg"/>
+        </Button>
+
+        <Button Grid.Column="3" x:Name="MixButton"  HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="38" Width="55" Click="Button_Click_7" Margin="0,0,0,48">
+            <Image Source="C:\Users\Matvey\Desktop\PRacticus3-master\PR3\image\Mix.jpg" Width="78"></Image>
+        </Button>
+        <Slider Grid.ColumnSpan="5" x:Name="TrackTime" HorizontalAlignment="Center" Margin="0,389,0,0" VerticalAlignment="Top" Width="489" Height="35" ValueChanged="Slider_ValueChanged"/>
+
+        <Label Grid.Column="0" x:Name="StartTime" Content="0:00" HorizontalAlignment="Left" Margin="66,0,0,20" VerticalAlignment="Bottom" RenderTransformOrigin="0.604,-0.471"/>
+        <Label Grid.Column="4" x:Name="TimeLeft" Content="0:00" HorizontalAlignment="Right" Margin="0,0,60,25" VerticalAlignment="Bottom" Width="52"/>
+    </Grid>
+</Window>
